@@ -1,0 +1,29 @@
+Erstelle mir eine direkt herunterladbare UTF-8-TXT-Datei namens „namen_namequeue.txt“ mit genau 120 unterschiedlichen, frei erfundenen Namen/Bezeichnungen. Die Datei soll direkt in der GitHub-Pages-App „NameQueue“ nutzbar sein.
+
+FORMAT UND ZEICHENLIMIT (ZWINGEND):
+- Jede Zeile enthält GENAU EINEN vollständigen Namen oder eine kurze Fantasiebezeichnung.
+- Jeder Eintrag hat maximal 29 Zeichen INKLUSIVE sämtlicher Leerzeichen. Ziel: ungefähr 9–24 Zeichen; 29 ist die absolute Obergrenze.
+- Mindestens ein sichtbares Zeichen je Zeile; vorzugsweise 2–4 Wörter.
+- Nur Klartext, UTF-8. Keine Nummerierung, Überschriften, Aufzählungszeichen, CSV-Tabellen, Anführungszeichen, Markdown oder Kommentare.
+- Keine Leerzeilen, keine zusätzlichen Leerzeichen am Zeilenanfang oder -ende, keine Tabs und keine unsichtbaren Steuerzeichen.
+- Jeder Eintrag soll einzigartig sein.
+- Kopiere die Beispielnamen nicht 1:1 mehrfach und verwende keine echten personenbezogenen Datensätze.
+
+STIL: Erzeuge einen vielfältigen Mix aus erfundenen, leicht verspielten Namen – ähnlich wie:
+Doris gauxbe
+Max Carl wzfue
+Wzfue Friedrichs
+Markus Osixjww
+Gym Fit Bernszhs
+Pauli mit I hdjwjw
+Anna mit Doppel nnn
+
+Nutze z. B. deutsche Vornamen, Fantasiewörter, abgewandelte Nachnamen, Wortkombinationen mit „Gym Fit“, „mit I“ und „mit Doppel“. Namen sollen unterschiedlich lang sein, auf natürliche Weise variieren und nicht nur dieselbe Vorlage wiederholen. Keine beleidigenden oder diskriminierenden Ausdrücke.
+
+VALIDIERUNG VOR AUSGABE:
+1. Kontrolliere die Zeilenzahl: exakt 120.
+2. Kontrolliere jeden Eintrag auf maximal 29 Zeichen inklusive Leerzeichen.
+3. Kontrolliere eindeutige Einträge und das Fehlen leerer oder nummerierter Zeilen.
+4. Stelle sicher, dass die TXT-Datei ohne Nachbearbeitung direkt mit NameQueue kompatibel ist.
+
+Gib die echte „namen_namequeue.txt“ als herunterladbare Datei aus, nicht nur eine Liste oder einen Codeblock im Chat.

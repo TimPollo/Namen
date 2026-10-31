@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#f8f6fb">
+  <meta name="description" content="TXT-Datei laden, Namen nacheinander kopieren und nach erfolgreichem Kopieren automatisch entfernen.">
+  <title>NameQueue · Namen nacheinander kopieren</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <main class="app" aria-label="NameQueue Namensliste">
+    <header class="app-header">
+      <div class="brand">
+        <img class="brand-icon" src="./icon-192.png" alt="NameQueue App-Icon">
+        <div class="brand-name">
+          <span class="eyebrow">NAMEN · KOPIEREN · WEITER</span>
+          <h1>NameQueue<span class="brand-period">.</span></h1>
+        </div>
+      </div>
+      <p class="subhead">Datei laden. Namen kopieren. Nächster bereit.</p>
+    </header>
+
+    <section class="upload-card" aria-labelledby="uploadHeading">
+      <div class="upload-topline">
+        <div class="section-label" id="uploadHeading"><span class="step-number">01</span> Datei laden</div>
+        <span class="format-label">TXT · 1 Name / Zeile</span>
+      </div>
+      <div class="upload-action-row">
+        <label class="upload-button" for="fileInput">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4m0 0-4.5 4.5M12 4l4.5 4.5"/><path d="M4 15.5v3A2.5 2.5 0 0 0 6.5 21h11a2.5 2.5 0 0 0 2.5-2.5v-3"/></svg>
+          <span>TXT auswählen</span>
+        </label>
+        <input id="fileInput" type="file" accept=".txt,text/plain" aria-label="TXT-Datei mit Namen auswählen">
+        <div class="file-name" id="fileName" title="Keine Datei ausgewählt">Keine Datei geladen</div>
+      </div>
+      <p id="importNote" class="import-note">Maximal 29 Zeichen pro Name · Verarbeitung nur auf deinem Gerät</p>
+    </section>
+
+    <section class="queue-card" aria-labelledby="queueHeading">
+      <div class="queue-header">
+        <div class="queue-title-block">
+          <div class="section-label" id="queueHeading"><span class="step-number">02</span> Namen-Liste</div>
+          <p class="queue-subtitle">Ein Klick kopiert und entfernt den Namen.</p>
+        </div>
+        <div class="queue-counter" aria-live="polite"><strong id="remainingCount">0</strong><span>übrig</span></div>
+      </div>
+
+      <div class="queue-list" id="listViewport" tabindex="0" aria-label="Namensliste, bei Bedarf innerhalb dieses Bereichs scrollen">
+        <div id="emptyState" class="empty-state">
+          <div class="empty-glyph" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8.5" r="3"/><path d="M3.5 19v-1a5.5 5.5 0 0 1 11 0v1M17 8h4m-4 4h4m-4 4h4"/></svg>
+          </div>
+          <strong>Noch keine Namen</strong>
+          <span>Oben eine TXT-Datei auswählen, um die Liste zu starten.</span>
+        </div>
+        <ol class="name-list" id="nameList" aria-label="Namen in Originalreihenfolge" hidden></ol>
+      </div>
+
+      <div class="queue-footer">
+        <div class="footer-state" id="status" role="status" aria-live="polite">Bereit für deine Datei.</div>
+        <button type="button" class="clear-button" id="clearBtn" disabled>Leeren</button>
+      </div>
+    </section>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>
